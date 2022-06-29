@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        maven {
+            url = file("${project.rootDir}/repos")
+        }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        mavenCentral()
+        mavenLocal()
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.32"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:1.5.32"
+        classpath("com.spotify.ruler:ruler-gradle-plugin:1.2.1")
+//        classpath("com.mainli.plugin:analyze-so:1.0.0-SNAPSHOT")
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url = file("${project.rootDir}/repos")
+        }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url "https://raw.githubusercontent.com/Android-Mainli/Maven/master" }
+        mavenCentral()
+        mavenLocal()
+    }
+}

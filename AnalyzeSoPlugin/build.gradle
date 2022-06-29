@@ -1,0 +1,81 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+//    id "com.gradle.plugin-publish" version "1.0.0"
+//    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+repositories {
+    google()
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "11"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "11"
+}
+
+def ANDROID_GRADLE_PLUGIN = "3.6.0"
+
+dependencies {
+    compileOnly gradleApi()
+    compileOnly("com.android.tools.build:gradle:${ANDROID_GRADLE_PLUGIN}")
+    implementation("com.google.code.gson:gson:2.9.0")
+}
+repositories {
+    mavenCentral()
+}
+
+//pluginBundle {
+//    website = 'https://wiki.96kg.cn'
+////    vcsUrl = '<uri to project source repository>'
+//    tags = ['so', 'Analyze', 'plugins']
+//}
+//
+//group = 'com.mainli.analyze.so'
+//version = '1.0.0'
+//
+//gradlePlugin {
+//    plugins {
+//        greetingsPlugin {
+//            id = 'com.mainli.analyze.so'
+//            displayName = 'Analyze So File Source'
+//            description = 'Analyze So File Source'
+//            implementationClass = 'com.mainli.plugin.AnalyzeSoPlugin'
+//        }
+//    }
+//}
+
+
+//源码一起打包到maven
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId "com.mainli.plugin"
+            artifactId "analyze-so"
+            version "1.0.0"
+
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url = file("${project.rootDir}/repos")
+        }
+        maven {
+            url = file("${githubMaven}")
+        }
+    }
+}
+javadoc {
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
