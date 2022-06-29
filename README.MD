@@ -31,4 +31,4 @@ gradle命令执行
 ./gradlew :app:analyzeReleaseSo -q
 ```
 
-会在`app/build/outputs/release`保存一份json输出
+会在`app/build/outputs/analyze-so/release`保存一份json输出
