@@ -6,18 +6,18 @@
 //在项目根目录中build.gradle添加如下
 allprojects {
     repositories {
-    	  ...
-        maven { url "https://raw.githubusercontent.com/Android-Mainli/Maven/master" }
+        ...
+        maven { url 'https://jitpack.io' }
     }
 }
 buildscript {
     repositories {
         ...
-        maven { url "https://raw.githubusercontent.com/Android-Mainli/Maven/master" }
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
-      	...
-        classpath("com.mainli.plugin:analyze-so:1.0.0")
+        ...
+        classpath("com.github.Android-Mainli:AnalyzeSoPlugin:1.0.0")
     }
 }
 
@@ -28,8 +28,7 @@ apply plugin: "analyze-so"
 gradle命令执行
 
 ```shell
-./gradlew :app:analyzeDebugSo -q
-#或
 ./gradlew :app:analyzeReleaseSo -q
 ```
-会在`<module>/build/outputs`保存一份json输出
+
+会在`app/build/outputs/release`保存一份json输出

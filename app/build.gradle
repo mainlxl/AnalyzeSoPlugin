@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id("com.spotify.ruler")
-//    id "analyze-so"
+    id "analyze-so"
 }
 
 android {

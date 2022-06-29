@@ -46,9 +46,6 @@ publishing {
         maven {
             url = file("${project.rootDir}/repos")
         }
-        maven {
-            url = "https://jitpack.io"
-        }
     }
 }
 javadoc {
