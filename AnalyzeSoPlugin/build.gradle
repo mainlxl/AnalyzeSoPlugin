@@ -1,7 +1,5 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm'
-//    id "com.gradle.plugin-publish" version "1.0.0"
-//    id 'java-gradle-plugin'
     id 'maven-publish'
 }
 
@@ -29,27 +27,6 @@ repositories {
     mavenCentral()
 }
 
-//pluginBundle {
-//    website = 'https://wiki.96kg.cn'
-////    vcsUrl = '<uri to project source repository>'
-//    tags = ['so', 'Analyze', 'plugins']
-//}
-//
-//group = 'com.mainli.analyze.so'
-//version = '1.0.0'
-//
-//gradlePlugin {
-//    plugins {
-//        greetingsPlugin {
-//            id = 'com.mainli.analyze.so'
-//            displayName = 'Analyze So File Source'
-//            description = 'Analyze So File Source'
-//            implementationClass = 'com.mainli.plugin.AnalyzeSoPlugin'
-//        }
-//    }
-//}
-
-
 //源码一起打包到maven
 java {
     withJavadocJar()
@@ -58,7 +35,7 @@ java {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId "com.mainli.plugin"
+            groupId "com.github.Android-Mainli"
             artifactId "analyze-so"
             version "1.0.0"
 
