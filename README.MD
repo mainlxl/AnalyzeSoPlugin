@@ -32,4 +32,4 @@ gradle命令执行
 #或
 ./gradlew :app:analyzeReleaseSo -q
 ```
-会在<module>/build/outputs保存一份json输出
+会在`<module>/build/outputs`保存一份json输出
