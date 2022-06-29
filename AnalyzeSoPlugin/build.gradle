@@ -36,7 +36,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId "com.github.Android-Mainli"
-            artifactId "analyze-so"
+            artifactId "AnalyzeSoPlugin"
             version "1.0.0"
 
             from components.java
@@ -47,7 +47,7 @@ publishing {
             url = file("${project.rootDir}/repos")
         }
         maven {
-            url = file("${githubMaven}")
+            url = "https://jitpack.io"
         }
     }
 }
