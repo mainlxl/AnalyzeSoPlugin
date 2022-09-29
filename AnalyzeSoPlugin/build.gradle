@@ -16,7 +16,7 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "11"
 }
 
-def ANDROID_GRADLE_PLUGIN = "3.6.0"
+def ANDROID_GRADLE_PLUGIN = "7.3.0"
 
 dependencies {
     compileOnly gradleApi()
@@ -37,7 +37,7 @@ publishing {
         maven(MavenPublication) {
             groupId "com.github.Android-Mainli"
             artifactId "AnalyzeSoPlugin"
-            version "1.0.0"
+            version "1.0.1"
 
             from components.java
         }

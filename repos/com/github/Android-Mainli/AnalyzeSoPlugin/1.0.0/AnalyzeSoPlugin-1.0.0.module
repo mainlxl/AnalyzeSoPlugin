@@ -1,0 +1,129 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.Android-Mainli",
+    "module": "AnalyzeSoPlugin",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.5.31"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "AnalyzeSoPlugin-1.0.0.jar",
+          "url": "AnalyzeSoPlugin-1.0.0.jar",
+          "size": 9746,
+          "sha512": "fd9204b0f09fc6c0c0dc2180077104aa0d1c35535e90f2dd7479086a6b558b8f1dd177634d230f45dd2b4d9664a2698a98cb0675f2ff6ccbc547d770442c191c",
+          "sha256": "52e8d127197a6802fcd270e806d9329c2df771339c3ba8c91c0209a97dadc926",
+          "sha1": "15aa2104a176d67b0d4c8d81c89cee4de52f9185",
+          "md5": "55110514ad8460012b044444a1dbe6b3"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.5.31"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "AnalyzeSoPlugin-1.0.0.jar",
+          "url": "AnalyzeSoPlugin-1.0.0.jar",
+          "size": 9746,
+          "sha512": "fd9204b0f09fc6c0c0dc2180077104aa0d1c35535e90f2dd7479086a6b558b8f1dd177634d230f45dd2b4d9664a2698a98cb0675f2ff6ccbc547d770442c191c",
+          "sha256": "52e8d127197a6802fcd270e806d9329c2df771339c3ba8c91c0209a97dadc926",
+          "sha1": "15aa2104a176d67b0d4c8d81c89cee4de52f9185",
+          "md5": "55110514ad8460012b044444a1dbe6b3"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "AnalyzeSoPlugin-1.0.0-javadoc.jar",
+          "url": "AnalyzeSoPlugin-1.0.0-javadoc.jar",
+          "size": 261,
+          "sha512": "a013a95e0d8e6e993d9c08390e424ba58d2b0d4a20a43f67f3ef5f7e4ca47c194e570277b2a3fae7e8c7c23ba90063bb24bd32c2535033d516143f53ec6358d8",
+          "sha256": "4cbe685df0f990a6bdd710cc674dbbfbab49225947d943aa8a008708831e9f35",
+          "sha1": "f13e7f07b3c6b31f32e9c3b3f92dcd6948f4c562",
+          "md5": "4beae57a57f52efd0606d674e7d80fab"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "AnalyzeSoPlugin-1.0.0-sources.jar",
+          "url": "AnalyzeSoPlugin-1.0.0-sources.jar",
+          "size": 2335,
+          "sha512": "29aa67edf07284daea98d455090f4bb2c1b3158c7034a264957dfa235a971da4c49d905356afc9bad98a058b585eb3346b8cfdc729405a4d7686567d8fd7b297",
+          "sha256": "67153925771191313a480d28b357cda82377bcba92b7cd6b30a59aaa75635473",
+          "sha1": "9cd9f42a9c77270ff76191579d9f4d8055c08c4f",
+          "md5": "46fc07745a6086794dc388dca9f43bf6"
+        }
+      ]
+    }
+  ]
+}
