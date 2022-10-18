@@ -37,3 +37,4 @@ gradle命令执行
 
 会在`app/build/outputs/analyze-so/release(debug)`保存一份json输出
 
+> 参考[spotify ruler](https://github.com/spotify/ruler)进行实现
