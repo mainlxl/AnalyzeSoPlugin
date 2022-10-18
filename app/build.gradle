@@ -2,9 +2,10 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id("com.spotify.ruler")
-    id "analyze-so"
 }
-
+if (!Boolean.valueOf(PUBLISH_MAVEN)) {
+    apply plugin: 'analyze-so'
+}
 android {
     compileSdk 31
 
@@ -48,7 +49,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.13.0'
     implementation 'com.mainli:blur:1.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
-    implementation 'io.github.knight-zxw:lancet-runtime:0.0.3'
 }
 
 ruler {
@@ -56,18 +56,4 @@ ruler {
     locale.set("en")
     screenDensity.set(480)
     sdkVersion.set(27)
-}
-
-apply plugin: 'bytex'
-ByteX {
-    enable true
-    enableInDebug true
-}
-
-
-apply plugin: 'LancetX'
-LancetX {
-    enable true
-    enableInDebug true
-
 }

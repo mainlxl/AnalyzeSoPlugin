@@ -20,6 +20,7 @@ class AnalyzeSoPlugin : Plugin<Project> {
                 AnalyzeSoTask::class.java
             ) { task ->
                 task.group = name
+                task.dependsOn.add("assemble${variantName}")
                 task.variantName.set(project.provider { it })
                 task.reportJSONDir.set(project.layout.buildDirectory.dir("outputs/analyze-so/${it}"))
             }

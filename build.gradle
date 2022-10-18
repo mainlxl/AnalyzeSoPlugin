@@ -10,15 +10,16 @@ buildscript {
         mavenLocal()
         gradlePluginPortal()
         maven { url 'https://jitpack.io' }
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31"
-        classpath "org.jetbrains.kotlin:kotlin-android-extensions:1.5.31"
-        classpath("com.spotify.ruler:ruler-gradle-plugin:1.2.1")
-        classpath("com.github.Android-Mainli:AnalyzeSoPlugin:1.0.0")
-        classpath "com.bytedance.android.byteX:base-plugin:0.3.0"
-        classpath "io.github.knight-zxw:lancet-plugin:0.0.1"
+        classpath "com.android.tools.build:gradle:${ANDROID_GRADLE_PLUGIN}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:${KOTLIN_VERSION}"
+        classpath "com.spotify.ruler:ruler-gradle-plugin:1.2.1"
+        if (!Boolean.valueOf(PUBLISH_MAVEN)) {
+            classpath "com.github.Android-Mainli:AnalyzeSoPlugin:${ANALYZE_SO_PLUGIN_VERSION}"
+        }
     }
 }
 
@@ -33,5 +34,6 @@ allprojects {
         maven { url 'https://artifact.bytedance.com/repository/byteX/' }
         mavenCentral()
         mavenLocal()
+        google()
     }
 }
