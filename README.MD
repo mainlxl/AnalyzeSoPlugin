@@ -36,5 +36,21 @@ gradle命令执行
 ```
 
 会在`app/build/outputs/analyze-so/release(debug)`保存一份json输出
-
+```json
+[
+  {
+    "name": "com.mainli:blur:1.0.0",
+    "sofileList": [
+      "/mips/libblur-lib.so",
+      "/armeabi-v7a/libblur-lib.so",
+      "/mips64/libblur-lib.so",
+      "/x86/libblur-lib.so",
+      "/arm64-v8a/libblur-lib.so",
+      "/armeabi/libblur-lib.so",
+      "/x86_64/libblur-lib.so"
+    ],
+    "path": "home/mainli/.gradle/caches/transforms-3/6552cde9ffd50b892b8858a97522b46b/transformed/blur-1.0.0/jni"
+  }
+]
+```
 > 参考[spotify ruler](https://github.com/spotify/ruler)进行实现
