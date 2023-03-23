@@ -29,7 +29,7 @@ gradle命令执行
 
 ```shell
 demo配置了productFlavors可通过如下命令查看不同变体so
-./gradlew  tasks 查看所有tasks 本插件分组为Analyze So library tasks如下
+./gradlew  tasks 查看所有tasks 本插件分组为Analyze So Library tasks如下
 
 ...
 Analyze So Library tasks
@@ -48,6 +48,7 @@ assembleAnalyzeFlavors2ReleaseSo
 ./gradlew :app:analyzeFlavors1DebugSo -q
 
 ******************************************************************
+
 如果项目未配置了productFlavors可通过如下命令查看不同变体so
 ./gradlew :app:analyzeDebugSo -q
 ./gradlew :app:analyzeReleaseSo -q
