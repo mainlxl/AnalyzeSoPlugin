@@ -12,15 +12,30 @@ android {
     defaultConfig {
         applicationId "com.mainli.demo"
         minSdk 21
-        targetSdk 31
+        //noinspection ExpiredTargetSdkVersion
+        targetSdk 28
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions "flavors"
+    productFlavors {
+        flavors1 {
+            dimension "flavors"
+            versionName "0.0.1-flavors1"
+        }
+        flavors2 {
+            dimension "flavors"
+            versionName "0.0.1-flavors2"
+        }
+    }
+
     buildTypes {
         release {
+            debuggable true
+            signingConfig signingConfigs.debug
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -49,6 +64,8 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.13.0'
     implementation 'com.mainli:blur:1.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.7.0-Beta@jar"
+    implementation "com.jcodecraeer:xrecyclerview:1.6.0"
 }
 
 ruler {

@@ -4,14 +4,16 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.util.Log
 import android.view.ViewTreeObserver
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mainli.demo.databinding.ActivityMainBinding
 import com.mainli.demo.trace.TraceProcess
+import org.json.JSONObject
+import java.util.*
 
 class MainActivity : AppCompatActivity(), ViewTreeObserver.OnPreDrawListener {
 
@@ -41,6 +43,13 @@ class MainActivity : AppCompatActivity(), ViewTreeObserver.OnPreDrawListener {
         val viewTreeObserver = binding.root.viewTreeObserver
         viewTreeObserver.addOnPreDrawListener(this)
         TraceProcess.traceMethodEnd("MainActivity_onCreate")
+        binding.root.setOnClickListener {
+            aa()
+        }
+        val jsonObject = JSONObject()
+        jsonObject.put("aaa", Arrays.asList("1", "2"))
+        Log.d("Mainli", "onCreate: ${jsonObject}")
+
     }
 
     override fun onPreDraw(): Boolean {

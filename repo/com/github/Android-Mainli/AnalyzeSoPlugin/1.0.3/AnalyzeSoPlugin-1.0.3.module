@@ -1,0 +1,136 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.Android-Mainli",
+    "module": "AnalyzeSoPlugin",
+    "version": "1.0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "AnalyzeSoPlugin-1.0.3.jar",
+          "url": "AnalyzeSoPlugin-1.0.3.jar",
+          "size": 16487,
+          "sha512": "ee79f1fa4de7f2eb27b0bf066baba10289693eb1353dc9611a9d13bd5ad272c9b7b50cf3100f3b418800549ab44c036e965300778c709c438495c0ec8565ad59",
+          "sha256": "1cb74b063e90e546884e990f13fc84b09b2ba4c5ba0c654ffa46bc7db73d901e",
+          "sha1": "795da521ae3e46ee269b1f09a76fd384b5bb39d3",
+          "md5": "6a255dff73618603719a3be85cf934bd"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "AnalyzeSoPlugin-1.0.3.jar",
+          "url": "AnalyzeSoPlugin-1.0.3.jar",
+          "size": 16487,
+          "sha512": "ee79f1fa4de7f2eb27b0bf066baba10289693eb1353dc9611a9d13bd5ad272c9b7b50cf3100f3b418800549ab44c036e965300778c709c438495c0ec8565ad59",
+          "sha256": "1cb74b063e90e546884e990f13fc84b09b2ba4c5ba0c654ffa46bc7db73d901e",
+          "sha1": "795da521ae3e46ee269b1f09a76fd384b5bb39d3",
+          "md5": "6a255dff73618603719a3be85cf934bd"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "AnalyzeSoPlugin-1.0.3-javadoc.jar",
+          "url": "AnalyzeSoPlugin-1.0.3-javadoc.jar",
+          "size": 261,
+          "sha512": "7f2a0376d93788fb913941be05adc3adca75b9a973f89cad907cd7d11214c6b68114e2b2aafa485c88bcc4b8debe2184e79fca3e68d7d8c83b946fa8ffb0ca13",
+          "sha256": "8ac6d953cee4b39caf4ddf2fc89747ef580f052216358a061c53cc63b1e206d1",
+          "sha1": "98cb0d81721cb9383251f6fb444f3161c8359eab",
+          "md5": "c758f362da67bfb67f0b6d7de1be1109"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "AnalyzeSoPlugin-1.0.3-sources.jar",
+          "url": "AnalyzeSoPlugin-1.0.3-sources.jar",
+          "size": 2396,
+          "sha512": "c581dc535f851b0fcf73f150523f18ab8dc6340db4ae52bbd358f17c097d9d4588da8e1c8af8a04b370a1e6537fd2fca9fa10e1404563a1227e2df3ea3f0e06e",
+          "sha256": "7d8bf3055cf12aea239276da8f1331bf43e3c7363e73f5515d4d885ecb53f073",
+          "sha1": "27f6279c64f3934cd7745c221790c99cd829d1b7",
+          "md5": "87228755afdbc72ffdd2c90b58e93cc5"
+        }
+      ]
+    }
+  ]
+}

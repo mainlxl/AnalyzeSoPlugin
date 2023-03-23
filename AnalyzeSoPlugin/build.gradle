@@ -21,6 +21,7 @@ dependencies {
     compileOnly gradleApi()
     compileOnly("com.android.tools.build:gradle:${ANDROID_GRADLE_PLUGIN}")
     implementation("com.google.code.gson:gson:2.9.0")
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.7.10'
 }
 repositories {
     mavenCentral()
@@ -43,7 +44,29 @@ publishing {
     }
     repositories {
         maven {
-            url = file("${project.rootDir}/repos")
+            url = rootProject.file(REPO_NAME)
+        }
+
+        def localPro = new Properties()
+        def localProFile = rootProject.file('local.properties')
+        if (localProFile.exists()) {
+            localProFile.withReader('UTF-8') { reader ->
+                localPro.load(reader)
+            }
+        }
+        if (Boolean.parseBoolean(localPro.ENABLE_NEXUS)) {
+            maven {
+                allowInsecureProtocol = true
+                credentials {
+                    username localPro.NEXUS_MAVEN_USERNAME
+                    password localPro.NEXUS_MAVEN_PASSWORD
+                }
+                if (version.endsWith('-SNAPSHOT')) {
+                    url = localPro.NEXUS_MAVEN_URL_SNAPSHOT
+                } else {
+                    url = localPro.NEXUS_MAVEN_URL
+                }
+            }
         }
     }
 }

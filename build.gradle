@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         maven {
-            url = file("${project.rootDir}/repos")
+            url = rootProject.file(REPO_NAME)
         }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
@@ -26,7 +26,7 @@ buildscript {
 allprojects {
     repositories {
         maven {
-            url = file("${project.rootDir}/repos")
+            url = rootProject.file(REPO_NAME)
         }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
@@ -37,3 +37,4 @@ allprojects {
         google()
     }
 }
+
