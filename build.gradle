@@ -1,7 +1,9 @@
 buildscript {
     repositories {
-        maven {
-            url = rootProject.file(REPO_NAME)
+        if (Boolean.parseBoolean(USE_LOCAL_MAVEN)) {
+            maven {
+                url = rootProject.file(REPO_NAME)
+            }
         }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
@@ -25,8 +27,10 @@ buildscript {
 
 allprojects {
     repositories {
-        maven {
-            url = rootProject.file(REPO_NAME)
+        if (Boolean.parseBoolean(USE_LOCAL_MAVEN)) {
+            maven {
+                url = rootProject.file(REPO_NAME)
+            }
         }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
@@ -35,6 +39,7 @@ allprojects {
         mavenCentral()
         mavenLocal()
         google()
+        maven { url 'https://jitpack.io' }
     }
 }
 
