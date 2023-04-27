@@ -1,5 +1,5 @@
 # 分析so库来自那个库
-
+[![](https://jitpack.io/v/mainlxl/AnalyzeSoPlugin.svg)](https://jitpack.io/#mainlxl/AnalyzeSoPlugin)
 配置：
 
 ```groovy
@@ -17,7 +17,7 @@ buildscript {
     }
     dependencies {
         ...
-        classpath("com.github.mainlxl:AnalyzeSoPlugin:1.0.3")
+        classpath("com.github.mainlxl:AnalyzeSoPlugin:version")
     }
 }
 
