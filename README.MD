@@ -17,7 +17,7 @@ buildscript {
     }
     dependencies {
         ...
-        classpath("com.github.Android-Mainli:AnalyzeSoPlugin:1.0.3")
+        classpath("com.github.mainlxl:AnalyzeSoPlugin:1.0.3")
     }
 }
 
