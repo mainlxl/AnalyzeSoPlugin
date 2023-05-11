@@ -1,6 +1,4 @@
 # 分析so库来自那个库
-[![](https://jitpack.io/v/mainlxl/AnalyzeSoPlugin.svg)](https://jitpack.io/#mainlxl/AnalyzeSoPlugin)
-
 配置：
 
 ```groovy
@@ -25,6 +23,7 @@ buildscript {
 //在项目app module中添加应用
 apply plugin: "analyze-so"
 ```
+当前版本：![](https://jitpack.io/v/mainlxl/AnalyzeSoPlugin.svg)
 
 gradle命令执行
 
